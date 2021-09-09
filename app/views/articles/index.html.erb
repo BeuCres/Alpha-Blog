@@ -1,2 +1,8 @@
 <h1 class="text-center mt-4"> Articles Listing Page </h1>
+<div class = "pagination">
+  <%= will_paginate @articles, renderer:  WillPaginate::ActionView::BootstrapLinkRenderer %>
+</div>
 <%= render 'article' %>
+<div class = "pagination">
+  <%= will_paginate @articles, renderer:  WillPaginate::ActionView::BootstrapLinkRenderer %>
+</div>

@@ -4,4 +4,7 @@
 <%= link_to "Edit your profile", edit_user_path, class: "btn btn-outline-info" %>
 </div>
 <h3 class="text-center mt-4"> Articles </h3>
+<div class = "pagination">
+  <%= will_paginate @articles, renderer:  WillPaginate::ActionView::BootstrapLinkRenderer %>
+</div>
 <%= render 'articles/article' %>
