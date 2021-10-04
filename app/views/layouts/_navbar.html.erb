@@ -34,6 +34,9 @@
                 <%= link_to "Edit your profile", edit_user_path(current_user), class: "nav-link" %>
               </li>
               <li class="nav-item">
+              <%= link_to "Delete profile", user_path(current_user), class: "nav-link text-danger", method: :delete, data: { confirm: "Are you sure?" } %> 
+              </li>
+              <li class="nav-item">
                 <%= link_to 'Logout', logout_path, class: "nav-link", data:{ method: :delete} %>
               </li>
             <% else %>
