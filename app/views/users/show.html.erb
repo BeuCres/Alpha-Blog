@@ -1,8 +1,10 @@
 <h3 class="text-center mt-4"> <%= @user.username %>'s Profile </h3>
 <%= gravatar_for @user, size: 200 %>
+<% if logged_in? and @user == current_user %>
 <div class="text-center mt-4">
 <%= link_to "Edit your profile", edit_user_path, class: "btn btn-outline-info" %>
 </div>
+<% end %>
 <h3 class="text-center mt-4"> Articles </h3>
 <div class = "pagination">
   <%= will_paginate @articles, renderer:  WillPaginate::ActionView::BootstrapLinkRenderer %>
